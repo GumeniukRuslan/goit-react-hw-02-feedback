@@ -19,7 +19,7 @@ export class App extends Component {
     return (
     <div className="container">
       <Section title='Please leave feedback'>
-          <FeedbackOptions options={['good', 'neutral', 'bad']} onLeaveFeedback={this.onLeaveFeedback} />
+          <FeedbackOptions options={[...Object.keys(this.state)]} onLeaveFeedback={this.onLeaveFeedback} />
           <Statistics good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} total={this.countTotalFeedback()} positivePercentage={this.countPositiveFeedbackPercentage(this.state)}/>
       </Section>
     </div>
