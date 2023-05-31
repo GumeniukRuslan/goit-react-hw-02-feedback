@@ -7,6 +7,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 code {
@@ -15,19 +19,20 @@ code {
 }
 
 .container {
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  height: 100vh;
+  background-color: #efeaea6b;
+  border-radius: 8px;
+  padding: 20px 40px;
+  min-height: 310px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 section {
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  padding: 20px;
-  min-height: 310px;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ width: 100%;
 }
 
 .feedback-list {

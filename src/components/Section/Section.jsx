@@ -1,7 +1,7 @@
-export const Section = ({ title, children }) => {
+export const Section = ({primeHeader, title, children }) => {
   return (
     <section>
-      <h1>{title}</h1>
+      {primeHeader ? <h1>{title}</h1> : <h2>{title}</h2>}
       {children}
     </section>
   )

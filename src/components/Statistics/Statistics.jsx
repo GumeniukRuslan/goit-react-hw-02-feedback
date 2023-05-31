@@ -3,7 +3,6 @@ import { Notification } from "components/Notification/Notification"
 export const Statistics = ({good, neutral, bad, total, positivePercentage}) => {
   return (
     <>
-      <h2>Statistics</h2>
       {total ? 
         <ul className="statistics-list">
           <li>Good: {good}</li>

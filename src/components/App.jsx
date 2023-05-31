@@ -18,9 +18,11 @@ export class App extends Component {
   render() {
     return (
     <div className="container">
-      <Section title='Please leave feedback'>
-          <FeedbackOptions options={[...Object.keys(this.state)]} onLeaveFeedback={this.onLeaveFeedback} />
-          <Statistics good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} total={this.countTotalFeedback(this.state)} positivePercentage={this.countPositiveFeedbackPercentage(this.state)}/>
+      <Section primeHeader='true' title='Please leave feedback'>
+        <FeedbackOptions options={[...Object.keys(this.state)]} onLeaveFeedback={this.onLeaveFeedback} />
+      </Section>
+      <Section title='Statistics'>
+        <Statistics good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} total={this.countTotalFeedback(this.state)} positivePercentage={this.countPositiveFeedbackPercentage(this.state)}/>
       </Section>
     </div>
   );
